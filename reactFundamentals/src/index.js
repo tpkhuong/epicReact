@@ -14,16 +14,24 @@ class App extends React.Component {
     //   work with this.state obj
     this.state = {
       count: 0,
+      selectors: {},
       addOne() {
-        console.log("hello");
+        this.count++;
+        console.log(this.count);
       },
     };
   }
   render() {
+    console.log(document.getElementById("test"));
+
     return (
       <React.Fragment>
-        <div id="test">Hello React!!!</div>
-        <IncrementButton dataProp="say">Say Hi</IncrementButton>
+        <div id="test" tabIndex="0">
+          Hello React!!!
+        </div>
+        <IncrementButton id="hi" dataProp="say">
+          Say Hi
+        </IncrementButton>
         <IncrementButton dataProp="add" stateObj={this.state}>
           Add One
         </IncrementButton>
