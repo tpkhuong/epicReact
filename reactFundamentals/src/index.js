@@ -2,6 +2,18 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "../public/styles.css";
 import IncrementButton from "./button";
+import { dataObj } from "./data";
+import ourSelectors from "./selectors";
+
+/**
+ * import run first IncrementButton
+ * code in IncrementButton component will run
+ * then code in this module file
+ * then code in component
+ * then render
+ * **/
+console.log("selector in App component", ourSelectors());
+console.log("outside App component", dataObj);
 
 // import our component here
 
@@ -10,6 +22,7 @@ import IncrementButton from "./button";
 // }
 class App extends React.Component {
   constructor(props) {
+    console.log("constructor App component", dataObj);
     super(props);
     //   work with this.state obj
     this.state = {

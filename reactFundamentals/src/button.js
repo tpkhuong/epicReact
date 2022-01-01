@@ -2,18 +2,24 @@ import React, { useEffect } from "react";
 import { dataObj } from "./data";
 import ourSelectors from "./selectors";
 
-console.log(dataObj);
+console.log("outside IncrementButton component", dataObj);
 const name = "Marvel";
 
 function IncrementButton(props) {
+  /**
+   * come back to this
+   * **/
+  // const { idButton } = await import("./selectors.js");
+  // console.log("idButton inside IncrementButton func", idButton);
+  console.log("inside IncrementButton component", dataObj);
   const { children, dataProp, stateObj, id } = props;
   // console.log(document.getElementById("test"));
   // document.getElementById("hi");
 
   id === "hi"
     ? useEffect(() => {
-        console.log("inside useEffect of button", dataObj),
-          console.log("inside useEffect of button", ourSelectors());
+        console.log("inside useEffect of button", dataObj);
+        console.log("inside useEffect of button", ourSelectors());
       })
     : null;
 
